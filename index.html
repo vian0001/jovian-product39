@@ -868,6 +868,13 @@
         <!-- Section: Membuat Tabel Routing -->
         <div class="section fade-in">
             <h2 class="section-title">2. MEMBUAT TABEL ROUTING TAMBAHAN</h2>
+
+                      <h2 class="section-title"># topologi yang digunakan</h2>
+    <div class="image-container">
+        <img src="https://github.com/vian0001/jovian-product37/blob/main/Untitled%20Diagram.drawio.png?raw=true" alt="Topologi di GNS3">
+        <div class="image-caption">Tampilan topologi di gns3</div>
+    </div>
+        
             
             <p>Dari sumber MikroTik Documentation (2024), tabel routing dapat dilihat dan dikonfigurasi dari menu /routing/table. Secara default, RouterOS hanya memiliki tabel routing 'main'. Jika tabel routing kustom diperlukan, tabel tersebut harus didefinisikan terlebih dahulu di menu ini sebelum digunakan di bagian mana pun dalam konfigurasi.</p>
             
@@ -948,7 +955,7 @@
             </ol>
             
             <div class="image-container">
-                <img src="https://via.placeholder.com/800x400/1e293b/06b6d4?text=Menambahkan+Rute" alt="Menambahkan Rute ke Tabel Routing">
+                <img src="no (1).png" alt="Menambahkan Rute ke Tabel Routing">
                 <div class="image-caption">Menambahkan rute default ke tabel routing kustom di MikroTik</div>
             </div>
             
@@ -975,6 +982,13 @@
         <!-- Section: Membuat Aturan Mangle -->
         <div class="section fade-in">
             <h2 class="section-title">4. MEMBUAT ATURAN MANGLE UNTUK PENANDAAN PAKET</h2>
+                      <h2 class="section-title"># topologi yang digunakan</h2>
+    <div class="image-container">
+        <img src="https://github.com/vian0001/jovian-product37/blob/main/Untitled%20Diagram.drawio.png?raw=true" alt="Topologi di GNS3">
+        <div class="image-caption">Tampilan topologi di gns3</div>
+    </div>
+
+            
             
             <p>Dari sumber MikroTik Documentation (2024), RouterOS memberikan opsi untuk menggunakan firewall mangle untuk policy routing. Metode ini memberikan kontrol lebih atas kriteria yang digunakan untuk mengarahkan lalu lintas, misalnya, penyeimbangan per koneksi atau per paket, dan sebagainya. Untuk informasi lebih lanjut tentang cara menggunakan penandaan mangle, lihat contoh Firewall Marking.</p>
             
@@ -1004,12 +1018,7 @@
                 <li>Klik <strong>OK</strong> untuk menyimpan aturan mangle pertama.</li>
                 <li>Ulangi langkah 3-6 untuk membuat aturan kedua untuk ISP2, dengan mengubah Src. Address menjadi rentang IP klien kedua (misalnya 192.168.0.101-192.168.0.200) dan New Routing Mark menjadi "ISP2".</li>
             </ol>
-            
-            <div class="image-container">
-                <img src="https://via.placeholder.com/800x400/1e293b/06b6d4?text=Membuat+Aturan+Mangle" alt="Membuat Aturan Mangle">
-                <div class="image-caption">Membuat aturan mangle untuk penandaan paket di MikroTik</div>
-            </div>
-            
+
             <div class="tech-alert">
                 <p>Anda juga dapat menandai paket berdasarkan kriteria lain seperti protokol, port, atau aplikasi tertentu. Misalnya, untuk mengarahkan lalu lintas video streaming melalui ISP1 dan lalu lintas game melalui ISP2.</p>
             </div>
@@ -1033,6 +1042,13 @@
         <!-- Section: Membuat Aturan Routing Rules -->
         <div class="section fade-in">
             <h2 class="section-title">5. MEMBUAT ATURAN ROUTING RULES</h2>
+
+                      <h2 class="section-title"># topologi yang digunakan</h2>
+    <div class="image-container">
+        <img src="https://github.com/vian0001/jovian-product37/blob/main/Untitled%20Diagram.drawio.png?raw=true" alt="Topologi di GNS3">
+        <div class="image-caption">Tampilan topologi di gns3</div>
+    </div>
+        
             
             <p>Dari sumber MikroTik Documentation (2024), selain firewall mangle, RouterOS juga menyediakan routing rules - serangkaian parameter dasar yang dapat digunakan untuk dengan cepat mengarahkan lalu lintas. Tidak direkomendasikan untuk menggunakan kedua metode (mangle dan routing rules) secara bersamaan kecuali Anda tahu persis apa yang Anda lakukan. Jika Anda benar-benar perlu menggunakan mangle dan routing rules dalam setup yang sama, perhatikan bahwa mangle memiliki prioritas lebih tinggi, artinya jika lalu lintas yang ditandai mangle dapat diselesaikan dalam tabel, maka aturan rute tidak akan pernah melihat lalu lintas ini.</p>
             
@@ -1065,7 +1081,7 @@
             </ol>
             
             <div class="image-container">
-                <img src="https://via.placeholder.com/800x400/1e293b/06b6d4?text=Membuat+Aturan+Routing" alt="Membuat Aturan Routing">
+                <img src="no (2).png" alt="Membuat Aturan Routing">
                 <div class="image-caption">Membuat aturan routing di MikroTik</div>
             </div>
             
@@ -1090,6 +1106,13 @@
         <!-- Section: Pengujian dan Verifikasi -->
         <div class="section fade-in">
             <h2 class="section-title">6. PENGUJIAN DAN VERIFIKASI POLICY ROUTING</h2>
+
+                      <h2 class="section-title"># topologi yang digunakan</h2>
+    <div class="image-container">
+        <img src="https://github.com/vian0001/jovian-product37/blob/main/Untitled%20Diagram.drawio.png?raw=true" alt="Topologi di GNS3">
+        <div class="image-caption">Tampilan topologi di gns3</div>
+    </div>
+        
             
             <p>Dari sumber MikroTik Wiki (2023), Winbox dapat digunakan sebagai alat untuk memantau lalu lintas setiap antarmuka, queue, atau aturan firewall secara real-time. Ini sangat berguna untuk memverifikasi bahwa policy routing bekerja sebagaimana mestinya.</p>
             
@@ -1150,6 +1173,13 @@
         <!-- Section: Troubleshooting -->
         <div class="section fade-in">
             <h2 class="section-title">7. TROUBLESHOOTING POLICY ROUTING</h2>
+
+                      <h2 class="section-title"># topologi yang digunakan</h2>
+    <div class="image-container">
+        <img src="https://github.com/vian0001/jovian-product37/blob/main/Untitled%20Diagram.drawio.png?raw=true" alt="Topologi di GNS3">
+        <div class="image-caption">Tampilan topologi di gns3</div>
+    </div>
+        
             
             <p>Dari sumber MikroTik Documentation (2024), jika terlalu banyak perubahan dibuat saat dalam safe mode, dan tidak ada ruang dalam riwayat untuk menampung semuanya (saat ini riwayat menyimpan hingga 100 tindakan terbaru), maka sesi secara otomatis dikeluarkan dari safe mode, dan tidak ada perubahan yang secara otomatis dibatalkan. Oleh karena itu, lebih baik mengubah konfigurasi dalam langkah-langkah kecil, saat dalam safe mode. Menekan [Ctrl]+[X] dua kali adalah cara mudah untuk mengosongkan daftar tindakan safe mode.</p>
             
@@ -1397,4 +1427,5 @@
         window.addEventListener('resize', adjustParticleCount);
     </script>
 </body>
+
 </html>
